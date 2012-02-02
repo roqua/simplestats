@@ -1,7 +1,14 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'rack/test'
 
-describe "Simplestats" do
-  it "fails" do
-    fail "hey buddy, you should probably rename this file and start specing for real"
+describe SimpleStats do
+  include Rack::Test::Methods
+
+  def app
+    SimpleStats
+  end
+
+  it 'saves pageviews' do
+
   end
 end
