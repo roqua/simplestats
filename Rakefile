@@ -22,6 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.add_development_dependency 'rack-test'
   gem.add_development_dependency "rdoc", "~> 3.12"
   gem.add_development_dependency "jeweler", "~> 1.8.3"
+  gem.add_development_dependency "database_cleaner", "0.7.1"
 end
 Jeweler::RubygemsDotOrgTasks.new
 
