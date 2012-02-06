@@ -14,7 +14,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "simplestats"
-  gem.homepage = "http://github.com/marten/simplestats"
+  gem.homepage = "http://roqua.github.com/simplestats"
   gem.license = "MIT"
   gem.summary = %Q{A really simple webstats collection engine}
   gem.description = %Q{A Sinatra application that makes it easy to collect and store web statistics}
