@@ -14,6 +14,24 @@ Mount as engine somewhere in your application:
 
     mount SimpleStats, "/stats"
 
+In your layout, add:
+
+    :javascript
+      $(document).ready(function(){
+        jQuery.post("/stats", {
+          professional_id: #{@professional.id},
+          patient_id: #{@patient.id},
+          url: $(location).attr('href'),
+
+          browser: {
+            document: {
+              width: $(document).width(),
+              height: $(document).height()
+            }
+          }
+        });
+      });
+
 The following stuff is still TODO:
 
 * Add SimpleStats::Middleware as Rack middleware to collect
