@@ -8,7 +8,7 @@ a view helper that tracks information from the client-side of a request.
 Both parts can be used independently, and when used together, SimpleStats will
 automatically store them together in the same MongoDB record.
 
-# How to use
+## How to use
 
 Mount as engine somewhere in your application:
 
@@ -32,7 +32,7 @@ In your layout, add:
         });
       });
 
-# TODO
+## TODO
 
 * Rack middleware component `SimpleStats::Middleware` that logs
   information from the server-side of the request.
