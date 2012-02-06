@@ -10,7 +10,12 @@ automatically store them together in the same MongoDB record.
 
 # How to use
 
-* Mount as engine somewhere in your application
+Mount as engine somewhere in your application:
+
+    mount SimpleStats, "/stats"
+
+The following stuff is still TODO:
+
 * Add SimpleStats::Middleware as Rack middleware to collect
   information from the server-side of the request.
 * In your layout, add
