@@ -34,5 +34,4 @@ The following stuff is still TODO:
 
 ## Copyright
 
-Copyright (c) 2012 Marten Veldthuis. See LICENSE.txt for further details.
-
+Copyright (c) 2012 RGOc. See LICENSE.txt for further details.
