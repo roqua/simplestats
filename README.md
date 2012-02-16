@@ -12,7 +12,7 @@ automatically store them together in the same MongoDB record.
 
 Mount as engine somewhere in your application:
 
-    mount SimpleStats, "/stats"
+    mount SimpleStats::Engine, "/stats"
 
 In your layout, add:
 
