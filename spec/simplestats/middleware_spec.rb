@@ -16,7 +16,5 @@ module SimpleStats
       middleware.call({})
       Stat.all.should have(1).stat
     end
-
-    it ''
   end
 end
