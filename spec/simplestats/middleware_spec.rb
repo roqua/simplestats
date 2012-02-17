@@ -3,18 +3,23 @@ require 'rack/test'
 
 module SimpleStats
   describe Middleware do
+    let(:app) { stub(:call => nil) }
+    let(:middleware) { SimpleStats::Middleware.new(app) }
+
     it 'acts as middleware' do
-      app, status, headers, body = stub, stub, stub, stub
+      status, headers, body = stub, stub, stub
       app.stub(:call).and_return { [status, headers, body] }
-      middleware = SimpleStats::Middleware.new(app)
       middleware.call({}).should == [status, headers, body]
     end
 
     it 'creates a stat' do
-      app = stub(:call => nil)
-      middleware = SimpleStats::Middleware.new(app)
       middleware.call({})
       Stat.all.should have(1).stat
+    end
+
+    it "doesn't crash if Stat can't be created" do
+      Stat.stub(:create) { raise "FAIL" }
+      expect { middleware.call({}) }.not_to raise_error("FAIL")
     end
   end
 end
