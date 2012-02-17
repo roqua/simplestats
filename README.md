@@ -10,9 +10,13 @@ automatically store them together in the same MongoDB record.
 
 ## How to use
 
-Mount as engine somewhere in your application:
+Mount as engine somewhere in your `config/routes.rb`:
 
     mount SimpleStats::Engine, "/stats"
+
+Include the middleware component in your `config/application.rb`:
+
+    config.middleware.use SimpleStats::Middleware
 
 In your layout, add:
 
@@ -34,8 +38,6 @@ In your layout, add:
 
 ## TODO
 
-* Rack middleware component `SimpleStats::Middleware` that logs
-  information from the server-side of the request.
 * View helpers like
 
     <%= 

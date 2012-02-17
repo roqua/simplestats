@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Marten Veldthuis"]
-  s.date = "2012-02-06"
+  s.date = "2012-02-17"
   s.description = "A Sinatra application that makes it easy to collect and store web statistics"
   s.email = "marten@veldthuis.com"
   s.extra_rdoc_files = [
@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    ".document",
     ".rspec",
     ".travis.yml",
     "Gemfile",
@@ -27,10 +26,16 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/simplestats.rb",
-    "spec/simplestats_spec.rb",
+    "lib/simplestats/engine.rb",
+    "lib/simplestats/middleware.rb",
+    "lib/simplestats/stat.rb",
+    "simplestats.gemspec",
+    "spec/simplestats/engine_spec.rb",
+    "spec/simplestats/middleware_spec.rb",
+    "spec/simplestats/stat_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/marten/simplestats"
+  s.homepage = "http://roqua.github.com/simplestats"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.11"
