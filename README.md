@@ -1,5 +1,7 @@
 # SimpleStats
 
+[![Build Status](https://secure.travis-ci.org/roqua/simplestats.png?branch=master)](http://travis-ci.org/roqua/simplestats)
+
 SimpleStats is a fairly minimalistic web stats package. It will track every
 request to your app. It consists of two parts: a Rack middleware component
 that can track information from the server-side processing of a request, and
